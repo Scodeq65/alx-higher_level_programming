@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""initialize a new square."""
+"""Initialize a new square."""
 
 
 def print_square(size):
