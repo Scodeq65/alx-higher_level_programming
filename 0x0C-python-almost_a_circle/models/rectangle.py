@@ -116,4 +116,6 @@ class Rectangle(Base):
         Returns:
             str: A string rep of the rectangle instance.
         """
-        return "[Rectangle] ({}) {}/{} - {}/{}" .format(self.id, self.x, self.y, self.width, self.height)
+        return "[Rectangle] ({}) {}/{} - {}/{}" .format(
+                self.id, self.x, self.y, self.width, self.height
+        )
