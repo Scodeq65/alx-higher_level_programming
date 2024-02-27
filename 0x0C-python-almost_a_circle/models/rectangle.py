@@ -121,15 +121,16 @@ class Rectangle(Base):
             *args: The arguments to assign to the attributes in the order
             (id, width, lenght, height, x, y)
         """
-        if len(args) >= 1:
+        num_args = len(args)
+        if num_args >= 1:
             self.id = args[0]
-        if len(args) >= 2:
+        if num_args >= 2:
             self.width = args[1]
-        if len(args) >= 3:
-            self.height >= args[2]
-        if len(args) >= 4:
+        if num_args >= 3:
+            self.height = args[2]
+        if num_args >= 4:
             self.x = args[3]
-        if len(args) >= 5:
+        if num_args >= 5:
             self.y = args[4]
 
     def __str__(self):
