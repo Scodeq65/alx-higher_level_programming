@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 import json
 
 """initialize a class"""
@@ -10,7 +11,7 @@ class Base:
 
     def __init__(self, id=None):
         """
-        Initializez a base object.
+        Initializes a base object.
 
         Args:
             id(int): that is the Id of the object
