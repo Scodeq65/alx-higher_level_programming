@@ -1,8 +1,7 @@
 #!/usr/bin/python3
+"""initialize a class"""
 
 import json
-
-"""initialize a class"""
 
 
 class Base:
