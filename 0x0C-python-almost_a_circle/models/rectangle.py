@@ -113,7 +113,7 @@ class Rectangle(Base):
             print(" " * self.x, end="")
             print("#" * self.__width)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """Updates the attributes of the rectangle instance based on the
         provided arguments.
 
@@ -132,6 +132,10 @@ class Rectangle(Base):
             self.x = args[3]
         if num_args >= 5:
             self.y = args[4]
+        else: # If args is empty, process kwargs
+            for key, value in kwargs.items():
+                if hasattr(self, key):
+                    setattr(self, key, value)
 
     def __str__(self):
         """Returns a string representation of the Rectangle instance.
