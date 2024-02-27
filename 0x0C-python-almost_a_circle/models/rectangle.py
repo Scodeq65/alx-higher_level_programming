@@ -132,7 +132,7 @@ class Rectangle(Base):
             self.x = args[3]
         if num_args >= 5:
             self.y = args[4]
-        else: # If args is empty, process kwargs
+        else:
             for key, value in kwargs.items():
                 if hasattr(self, key):
                     setattr(self, key, value)
