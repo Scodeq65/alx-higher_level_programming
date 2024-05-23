@@ -9,5 +9,5 @@ SELECT
 FROM
     information_schema.COLUMNS
 WHERE
-    TABLE_SCHEMA = 'hbtn_0c_0'
+    TABLE_SCHEMA = DATABASE()
     AND TABLE_NAME = 'first_table';
