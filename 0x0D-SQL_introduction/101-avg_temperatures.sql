@@ -1,5 +1,5 @@
 -- Script to display the average temperature by city ordered by temperature (descending)
 SELECT city, AVG(temperature) AS avg_temp
-FROM your_table_name
+FROM hbtn_0c_0
 GROUP BY city
 ORDER BY avg_temp DESC;
