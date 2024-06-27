@@ -36,11 +36,12 @@ def filter_states():
 
     rows = cur.fetchall()
 
-    for row in rows:
+    unique_rows = set(rows)
+    for row in unique_rows:
         print(row)
 
-        cur.close()
-        conn.close()
+    cur.close()
+    conn.close()
 
 
 if __name__ == "__main__":
