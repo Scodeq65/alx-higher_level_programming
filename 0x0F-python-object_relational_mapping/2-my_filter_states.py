@@ -25,7 +25,7 @@ def filter_states():
         db=db_name
     )
 
-    cur = conn.cursur()
+    cur = conn.cursor()
 
     query = (
         "SELECT * FROM states WHERE name = '{}' "
