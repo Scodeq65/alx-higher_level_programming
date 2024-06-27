@@ -8,8 +8,8 @@ import MySQLdb
 import sys
 
 
-def list_states():
-    """ Cconnects to a MySQL database and lists all states
+def filter_states():
+    """ Connects to a MySQL database and lists all states
     starting with 'N' in ascending order.
     """
     conn = MySQLdb.connect(
@@ -30,4 +30,4 @@ def list_states():
 
 
 if __name__ == "__main__":
-    list_states()
+    filter_states()
