@@ -1,7 +1,9 @@
 #!/usr/bin/python3
+
 """
-2-filter_states.py - A script that lists all states name
-that matches the provided arguments from the database.
+2-my_filter_states.py - A script that displays all values
+in the states table
+where name matches the provided state name argument.
 """
 
 import MySQLdb
@@ -9,8 +11,9 @@ import sys
 
 
 def filter_states():
-    """ Connects to a MySQL database and lists all states
-        that matches the provided arguments.
+    """
+    Connects to a MySQL database and queries the states table
+    based on the provided state name argument.
     """
     username = sys.argv[1]
     password = sys.argv[2]
@@ -24,16 +27,26 @@ def filter_states():
         passwd=password,
         db=db_name
     )
+
     cur = conn.cursor()
-    query = "SELECT * FROM states WHERE name = %s ORDER BY id ASC"
-    cur.execute(query, (state_name,))
 
-    rows = cur.fetchall()
-    for row in rows:
-        print(row)
+    try:
+        query = "SELECT * FROM states WHERE name = %s ORDER BY id ASC"
 
-    cur.close()
-    conn.close()
+        cur.execute(query, (state_name,))
+        rows = cur.fetchall()
+
+        for row in rows:
+            print(row)
+
+    except MySQLdb.Error as e:
+        print(f"Error querying MySQL: {e}")
+
+    finally:
+        if cur:
+            cur.close()
+        if conn:
+            conn.close()
 
 
 if __name__ == "__main__":
