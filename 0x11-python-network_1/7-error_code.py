@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """
-Python script that send a request to URL and display
-the body of the request.
+Python script that send a request to URL and display the body of the request.
 """
 
 import requests
@@ -17,5 +16,5 @@ def show_url(url):
 
 
 if __name__ == "__main__":
-    url =sys.argv[1]
+    url = sys.argv[1]
     show_url(url)
