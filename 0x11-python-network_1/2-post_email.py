@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""Python script that send a post request to a URL with email as it parameter."""
+"""
+Python script that send a post request to a URL with email as it parameter.
+"""
 
 import sys
 import urllib.parse
