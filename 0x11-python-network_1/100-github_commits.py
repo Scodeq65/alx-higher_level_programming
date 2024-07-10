@@ -18,7 +18,9 @@ def list_commits(repo, owner):
             author = commit.get('commit').get('author').get('name')
             print(f"{sha}: {author}")
     else:
-        print(f"Failed to retrieve commits. Status code: {response.status_code}")
+        print(
+            f"Failed to retrieve commits. Status code: {response.status_code}"
+        )
 
 
 if __name__ == "__main__":
